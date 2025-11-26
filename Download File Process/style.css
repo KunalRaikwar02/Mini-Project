@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #000000, #2d2d2d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 35px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.card p span {
+  color: #3da9ff;
+  font-weight: 600;
+}
+
+.outer {
+  height: 20px;
+  border-radius: 50px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.inner {
+  height: 100%;
+  width: 0%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00ff88, #00994a);
+  transition: width 0.12s linear;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.bottom h2 {
+  font-size: 60px;
+  font-family: monospace;
+  transition: 0.15s ease;
+}
+
+.bottom button {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #05b63b, #027224);
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 12px rgba(0, 255, 100, 0.3);
+}
+
+.bottom button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(0, 255, 100, 0.6);
+}
+
+.bottom button:active {
+  transform: scale(0.96);
+}
