@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #a4a4a4;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+img{
+  height: 320px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+img:hover{
+  transform: scale(1.05);
+  filter: saturate(1.4);
+}
+
+h2{
+  font-size: 26px;
+  background: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  border: 3px solid #000;
+  transition: 0.3s ease;
+}
+
+h2 span{
+  color: #ff5c5c;
+  font-weight: bold;
+}
