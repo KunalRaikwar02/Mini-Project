@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  cursor: none;
+  background: #0f0f0f;
+}
+
+main {
+  height: 200%;
+  width: 100%;
+}
+
+#cursor {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: transform 0.09s linear;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.8));
+  animation: pulse 1.2s infinite alternate;
+}
