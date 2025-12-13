@@ -22,6 +22,6 @@ main {
   position: fixed;
   transform: translate(-50%, -50%);
   transition: transform 0.09s linear;
-  filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.8));
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
   animation: pulse 1.2s infinite alternate;
 }
