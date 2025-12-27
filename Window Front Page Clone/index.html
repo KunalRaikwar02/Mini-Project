@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows 11 Desktop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop" oncontextmenu="showMenu(event)">
+
+  <!-- DESKTOP ICONS -->
+  <div class="desktop-icon" style="top:20px; left:20px;" ondblclick="openFolder()">
+    <img src="https://i.redd.it/cglk1r8sbyf71.png">
+    <span>New Folder</span>
+  </div>
+
+  <div class="desktop-icon" style="top:120px; left:20px;" ondblclick="openFolder()">
+    <img src="https://img.icons8.com/?size=100&id=FrjdqAi9UuDP&format=png&color=ffffff">
+    <span>This PC</span>
+  </div>
+
+  <div class="desktop-icon" style="top:220px; left:20px;" ondblclick="openFolder()">
+    <img src="https://winaero.com/blog/wp-content/uploads/2021/07/Recycle-bin-windows-11-icon.png">
+    <span>Recycle Bin</span>
+</div>
+
+  <div class="desktop-icon" style="top:330px; left:20px;">
+    <img src="https://img.icons8.com/?size=100&id=jqexjjILFgDS&format=png&color=000000">
+    <span>Network</span>
+</div>
+
+  <!-- FILE EXPLORER WINDOW -->
+  <div id="folderWindow">
+    <div class="window-title">
+      <span>📁 Explorer</span>
+      <button onclick="closeFolder()">✖</button>
+    </div>
+    <div class="window-content">
+      <div class="file">📁 Images</div>
+      <div class="file">📁 Videos</div>
+      <div class="file">📁 Documents</div>
+    </div>
+  </div>
+
+  <!-- RIGHT CLICK MENU -->
+  <ul id="contextMenu">
+    <li>New Folder</li>
+    <li>Refresh</li>
+    <li>Settings</li>
+  </ul>
+
+</div>
+
+ <!-- TASKBAR  -->
+<div id="taskbar">
+
+  <div class="taskbar-left">
+    <div id="weather">☀️ 26°C</div>
+  </div>
+
+  <div class="taskbar-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+    </div>
+    <img src="https://www.iconarchive.com/download/i95295/dtafalonso/android-l/Chrome.ico">
+    <img src="https://i.redd.it/cglk1r8sbyf71.png">
+    <img src="https://img.icons8.com/?size=100&id=Yd7MMo3G9EuR&format=png&color=ffffff">
+    <img src="https://img.icons8.com/?size=100&id=46gNeT4X7y2Z&format=png&color=000000">
+    <img src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000">
+  </div>
+
+  <div class="taskbar-right">
+    <div id="datetime"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

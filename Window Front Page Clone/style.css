@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* DESKTOP */
+#desktop {
+  width: 100%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1542640244-7e672d6cef4e?q=80&w=1470") center/cover no-repeat;
+  position: relative;
+}
+
+/* DESKTOP ICONS */
+.desktop-icon {
+  position: absolute;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.desktop-icon img {
+  width: 48px;
+  display: block;
+  margin: auto;
+}
+
+.desktop-icon span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* WINDOW */
+#folderWindow {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 420px;
+  height: 280px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  display: none;
+}
+
+.window-title {
+  height: 36px;
+  background: #2b579a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.window-title button {
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.window-content {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.file {
+  background: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+/* TASKBAR */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background: rgba(51, 51, 51, 0.81);
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.taskbar-left,
+.taskbar-right {
+  width: 20%;
+  padding: 0 15px;
+}
+
+.taskbar-center {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.taskbar-center img {
+  width: 26px;
+  cursor: pointer;
+}
+
+/* SEARCH */
+.search-box input {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* WEATHER */
+#weather {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* DATE TIME IN TASKBAR RIGHT */
+#datetime {
+  color: white;
+  font-size: 12px;
+  text-align: right;
+  text-shadow: 0 0 4px black;
+}
+
+/* RIGHT CLICK MENU */
+#contextMenu {
+  position: absolute;
+  background: white;
+  list-style: none;
+  display: none;
+  border: 1px solid #ccc;
+}
+
+#contextMenu li {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+#contextMenu li:hover {
+  background: #eee;
+}
