@@ -1,0 +1,109 @@
+/* Background with gradient animation */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #515151, #000000, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glass container */
+.container {
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Stopwatch display */
+.stopwatch {
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 0 0 20px #000000;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Base button style */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Start button */
+#start {
+  background: linear-gradient(45deg, #000000, #ffffff);
+  box-shadow: 0 0 15px #000000;
+}
+
+#start:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #b2b2b2;
+}
+
+/* Stop button */
+#stop {
+  background: linear-gradient(45deg, #000000, #ffffff);
+  box-shadow: 0 0 15px #000000;
+}
+
+#stop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #b2b2b2;
+}
+
+/* Reset button */
+#reset {
+  background: linear-gradient(45deg, #000000, #ffffff);
+  box-shadow: 0 0 15px #000000;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #b2b2b2;
+}
+
+/* Button click effect */
+button:active {
+  transform: scale(0.95);
+}
