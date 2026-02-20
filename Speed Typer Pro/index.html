@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speed Typer Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <div>🏆 High Score: <span id="high-score">0</span></div>
+    <button id="theme-toggle">🌙</button>
+  </div>
+
+  <h2>⚡ Speed Typer Pro</h2>
+
+  <div class="progress-bar">
+    <div id="progress"></div>
+  </div>
+
+  <small>Type the word:</small>
+
+  <h1 id="word">loading...</h1>
+
+  <input
+    type="text"
+    id="text"
+    placeholder="Start typing..."
+    autocomplete="off"
+  />
+
+  <div class="stats">
+    <p>⏱ Time: <span id="time">10s</span></p>
+    <p>🎯 Score: <span id="score">0</span></p>
+    <p>🔥 Streak: <span id="streak">0</span></p>
+  </div>
+
+  <div id="end-game-container" class="end-game-container"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
