@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+/* Animated Gradient Background */
+body.focus {
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+body.chill {
+  background: linear-gradient(-45deg, #56ccf2, #2f80ed, #4facfe, #00f2fe);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+body.energy {
+  background: linear-gradient(-45deg, #ff512f, #f09819, #ff9966, #ff5e62);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+body.dark {
+  background: linear-gradient(-45deg, #000000, #1c1c1c, #0f0f0f, #2b2b2b);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  width: 420px;
+  padding: 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 60px rgba(0,0,0,0.3);
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.clock {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.mood-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+#quote {
+  font-size: 14px;
+  opacity: 0.85;
+  min-height: 40px;
+  transition: 0.3s ease;
+}
