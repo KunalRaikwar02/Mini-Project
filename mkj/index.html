@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Cursor Trail UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:red;
+}
+
+.hero p{
+    max-width:600px;
+    opacity:0.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:12px 30px;
+    background:red;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:red;
+}
+
+/* Cards Section */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:80px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    background:#1a1a1a;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#222;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:red;
+}
+
+.card p{
+    opacity:0.6;
+    font-size:14px;
+}
+
+/* Cursor Trail */
+.trail{
+    position:fixed;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:red;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    filter:blur(4px);
+    opacity:0.8;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Creative <span>Red</span> Experience</h1>
+    <p>This is a smooth cursor trailing effect with modern UI design. Move your mouse around and feel the smooth delayed motion.</p>
+    <button class="btn">Explore More</button>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>Fast</h3>
+        <p>Optimized smooth animation using requestAnimationFrame.</p>
+    </div>
+    <div class="card">
+        <h3>Modern</h3>
+        <p>Clean dark UI with smooth hover transitions.</p>
+    </div>
+    <div class="card">
+        <h3>Interactive</h3>
+        <p>Responsive red cursor trail following your movement.</p>
+    </div>
+</section>
+
+<div class="trail"></div>
+
+<script>
+const trail = document.querySelector(".trail");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+const speed = 0.1;
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    currentX += (mouseX - currentX) * speed;
+    currentY += (mouseY - currentY) * speed;
+
+    trail.style.left = currentX + "px";
+    trail.style.top = currentY + "px";
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
