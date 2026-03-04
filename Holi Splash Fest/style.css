@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#1f1f2e,#16213e);
+}
+
+/* Overlay */
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#1f1f2e,#16213e);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    z-index:10;
+    transition:opacity 0.6s ease;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:30px;
+}
+
+#startBtn{
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:20px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    transition:0.3s ease;
+}
+
+#startBtn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px rgba(0,114,255,0.5);
+}
+
+/* Score - Glass UI */
+
+.score-board{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:12px 35px;
+    font-size:22px;
+    color:white;
+    display:none;
+    z-index:5;
+
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+    animation: floatScore 3s ease-in-out infinite;
+}
+
+@keyframes floatScore{
+    0%{ transform:translate(-50%,0px); }
+    50%{ transform:translate(-50%,-5px); }
+    100%{ transform:translate(-50%,0px); }
+}
+
+/* Balloon Container */
+
+.balloon-container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+/* 🎈 Balloon Design */
+
+.balloon{
+    position:absolute;
+    border-radius:50% 50% 45% 45%;
+    cursor:pointer;
+    animation: float linear forwards;
+    box-shadow: inset -10px -15px 25px rgba(0,0,0,0.2);
+}
+
+/* Balloon shine highlight */
+
+.balloon::before{
+    content:"";
+    position:absolute;
+    width:30%;
+    height:30%;
+    top:15%;
+    left:20%;
+    background:rgba(255,255,255,0.5);
+    border-radius:50%;
+    filter:blur(2px);
+}
+
+/* Balloon tail */
+
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:30px;
+    background:white;
+    bottom:-30px;
+    left:50%;
+    transform:translateX(-50%);
+    opacity:0.6;
+}
+
+/* Floating animation */
+
+@keyframes float{
+    from{ transform:translateY(100vh) rotate(0deg); }
+    to{ transform:translateY(-10vh) rotate(360deg); }
+}
