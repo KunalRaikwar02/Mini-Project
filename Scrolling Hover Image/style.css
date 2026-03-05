@@ -1,0 +1,211 @@
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f0f0f;
+color:white;
+overflow:hidden;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 80px;
+z-index:10;
+box-sizing:border-box;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+letter-spacing:3px;
+}
+
+
+/* NAV LINKS */
+
+.navbar ul{
+display:flex;
+gap:45px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.navbar li{
+cursor:pointer;
+position:relative;
+font-size:14px;
+letter-spacing:2px;
+opacity:0.8;
+transition:opacity 0.3s;
+}
+
+.navbar li:hover{
+opacity:1;
+}
+
+
+/* underline hover */
+
+.navbar li::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0%;
+height:2px;
+background:white;
+transition:width 0.3s ease;
+}
+
+.navbar li:hover::after{
+width:100%;
+}
+
+
+
+/* BACKGROUND IMAGE */
+
+.bg-image{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 0.2s ease;
+filter:brightness(0.45);
+z-index:0;
+}
+
+
+
+/* HERO */
+
+.hero{
+position:absolute;
+top:45%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:5;
+}
+
+
+/* GRADIENT TITLE */
+
+.title{
+font-size:80px;
+font-weight:800;
+
+background:linear-gradient(90deg,#ffffff,#aaaaaa,#ffffff);
+background-size:200%;
+
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+
+animation:shine 6s linear infinite;
+}
+
+
+/* SUBTITLE */
+
+.subtitle{
+margin-top:20px;
+font-size:18px;
+letter-spacing:3px;
+opacity:0.6;
+}
+
+
+
+/* GRADIENT ANIMATION */
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:200%;
+}
+
+}
+
+
+
+/* BOTTOM TEXT */
+
+.wrapper{
+position:absolute;
+bottom:50px;
+width:100%;
+overflow:hidden;
+z-index:5;
+}
+
+.marquee{
+overflow:hidden;
+}
+
+.track{
+display:flex;
+gap:420px;
+white-space:nowrap;
+animation:marquee 12s linear infinite;
+}
+
+.track:hover{
+animation-play-state:paused;
+}
+
+
+
+/* TEXT */
+
+.track span{
+font-size:110px;
+font-weight:800;
+
+transform:scaleX(1.6) scaleY(1.8);
+
+cursor:pointer;
+
+transition:transform 0.35s ease, color 0.35s ease, text-shadow 0.35s ease;
+}
+
+.track span:hover{
+color:#ff3c3c;
+
+transform:scaleX(1.6) scaleY(1.8) translateY(-4px);
+
+text-shadow:0 10px 30px rgba(255,60,60,0.6);
+}
+
+
+
+/* SCROLL */
+
+@keyframes marquee{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
