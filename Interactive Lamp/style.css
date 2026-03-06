@@ -1,0 +1,197 @@
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+background:#0c0c0c;
+font-family:sans-serif;
+color:white;
+overflow:hidden;
+transition:background 0.4s;
+}
+
+/* particles */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* room */
+
+.room{
+text-align:center;
+margin-top:80px;
+}
+
+/* wire */
+
+.wire{
+width:4px;
+height:120px;
+background:#444;
+margin:auto;
+}
+
+/* lamp */
+
+.lamp{
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* lamp shade */
+
+.shade{
+width:180px;
+height:80px;
+background:linear-gradient(#2a2a2a,#111);
+border-radius:90px 90px 20px 20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* bulb */
+
+.bulb{
+width:40px;
+height:40px;
+background:#444;
+border-radius:50%;
+margin-top:-10px;
+transition:0.4s;
+}
+
+/* bulb glow */
+
+.on{
+background:#ffeaa7;
+box-shadow:
+0 0 40px #ffeaa7,
+0 0 80px #ffeaa7,
+0 0 120px #ffeaa7;
+}
+
+/* cord */
+
+.cord{
+width:3px;
+height:120px;
+background:#777;
+margin:auto;
+cursor:pointer;
+position:relative;
+}
+
+.cord::after{
+content:"";
+position:absolute;
+bottom:-12px;
+left:50%;
+transform:translateX(-50%);
+width:12px;
+height:12px;
+background:#aaa;
+border-radius:50%;
+}
+
+/* cord pull */
+
+.pull{
+animation:pull 0.35s;
+}
+
+@keyframes pull{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(25px)}
+100%{transform:translateY(0)}
+
+}
+
+/* login form */
+
+.login{
+margin-top:90px;
+width:300px;
+padding:40px;
+border-radius:14px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.6);
+
+opacity:0;
+transform:translateY(40px);
+transition:0.5s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.login h2{
+margin-bottom:30px;
+font-weight:500;
+letter-spacing:1px;
+}
+
+/* input group */
+
+.input-group{
+position:relative;
+margin-bottom:25px;
+}
+
+.input-group input{
+width:100%;
+padding:12px;
+border:none;
+outline:none;
+border-radius:6px;
+background:#151515;
+color:white;
+}
+
+.input-group label{
+position:absolute;
+left:12px;
+top:12px;
+font-size:14px;
+color:#777;
+transition:0.3s;
+pointer-events:none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label{
+top:-10px;
+font-size:12px;
+color:#ffeaa7;
+}
+
+/* button */
+
+.login-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:linear-gradient(45deg,#ffeaa7,#ffd86b);
+cursor:pointer;
+font-weight:600;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.login-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(255,234,167,0.3);
+}
