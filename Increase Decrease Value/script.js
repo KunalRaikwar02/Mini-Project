@@ -1,48 +1,57 @@
-var h2 = document.querySelector('h2')
-var inc = document.querySelector('#inc')
-var decr = document.querySelector('#decr')
+let value = document.querySelector("#value")
+let inc = document.querySelector("#inc")
+let decr = document.querySelector("#decr")
+let reset = document.querySelector("#reset")
 
-var a = 0
-document.body.style.backgroundColor = "black"
-document.body.style.color = "white"
-document.body.style.display = "flex"
-document.body.style.flexDirection = "column"
-document.body.style.justifyContent = "center"
-document.body.style.alignItems = "center"
-document.body.style.height = "100vh"
-document.body.style.fontFamily = "Arial"
+let count = 0
 
-h2.style.fontSize = "60px"
-h2.style.marginBottom = "30px"
+function animate(){
+value.style.transform = "scale(1.3)"
 
-
-function styleButton(btn){
-    btn.style.padding = "12px 25px"
-    btn.style.margin = "10px"
-    btn.style.fontSize = "18px"
-    btn.style.border = "none"
-    btn.style.borderRadius = "10px"
-    btn.style.cursor = "pointer"
-    btn.style.background = "#9c9c9cff"
-    btn.style.color = "black"
-    btn.style.fontWeight = "bold"
+setTimeout(()=>{
+value.style.transform = "scale(1)"
+},150)
 }
-styleButton(inc)
-styleButton(decr)
 
-inc.onmouseover = () => inc.style.background = "#ff9d00ff"
-inc.onmouseout = () => inc.style.background = "#7c7c7cff"
+function updateColor(){
 
-decr.onmouseover = () => decr.style.background = "#ff9d00ff"
-decr.onmouseout = () => decr.style.background = "#7c7c7cff"
+if(count > 0){
+value.style.color = "#00ff9d"
+}
 
+else if(count < 0){
+value.style.color = "#ff4d4d"
+}
 
-inc.addEventListener('click', function(){
-      a++
-      h2.innerHTML = a
-    })
-    
-    decr.addEventListener('click', function(){
-        a--
-        h2.innerHTML = a
+else{
+value.style.color = "white"
+}
+
+}
+
+inc.addEventListener("click",function(){
+
+count++
+value.innerHTML = count
+animate()
+updateColor()
+
+})
+
+decr.addEventListener("click",function(){
+
+count--
+value.innerHTML = count
+animate()
+updateColor()
+
+})
+
+reset.addEventListener("click",function(){
+
+count = 0
+value.innerHTML = count
+animate()
+updateColor()
+
 })
