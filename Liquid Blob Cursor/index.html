@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="noise"></div>
+
+    <nav>
+        <h2 class="logo">Liquid<span>UI</span></h2>
+        <ul>
+            <li class="nav-item">Work</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <div class="content-box">
+            <h1 class="reveal-text">Fluid <span>Digital</span> Art</h1>
+            <p>Designing the next generation of interactive web standards with stable liquid physics.</p>
+            <div class="btn-group">
+                <div class="mag-btn-wrap">
+                    <button class="primary magnetic">Start Project</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="blob-wrapper">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="35" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -12" result="goo" />
+        </filter>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
