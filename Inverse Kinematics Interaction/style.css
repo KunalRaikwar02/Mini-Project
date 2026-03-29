@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #080808;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+.ui {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #bfbebe;
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+p {
+    font-size: 0.8rem;
+    color: #444;
+}
