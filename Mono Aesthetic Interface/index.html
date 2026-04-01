@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mono Aesthetic Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <nav>
+        <div class="logo">MONO.</div>
+        <div class="nav-links">
+            <a href="#">Info</a>
+            <a href="#">Work</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="left-section">
+            <div class="menu-wrapper">
+                <div class="menu-item active" data-bg="bg1">
+                    <span class="number">01</span>
+                    <h2>Minimalism</h2>
+                </div>
+                <div class="menu-item" data-bg="bg2">
+                    <span class="number">02</span>
+                    <h2>Architecture</h2>
+                </div>
+                <div class="menu-item" data-bg="bg3">
+                    <span class="number">03</span>
+                    <h2>Typography</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="bg-slide active" id="bg1">
+                <div class="overlay-text">STRENGTH IN SIMPLICITY</div>
+            </div>
+            <div class="bg-slide" id="bg2">
+                <div class="overlay-text">FORM FOLLOWS FUNCTION</div>
+            </div>
+            <div class="bg-slide" id="bg3">
+                <div class="overlay-text">DESIGN IS MEANING</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
