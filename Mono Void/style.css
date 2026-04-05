@@ -1,0 +1,66 @@
+:root {
+    --white: #ffffff;
+    --grey: #1a1a1a;
+    --black: #080808;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Anton', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+    mix-blend-mode: difference; 
+}
+
+nav, .bottom-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-text {
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(8rem, 20vw, 15rem);
+    line-height: 0.7;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+p {
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 12px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
