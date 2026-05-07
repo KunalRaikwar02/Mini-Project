@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9e9e9;
+  color: #111;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  padding: 0 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(233, 233, 233, 0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-family: "Anton", sans-serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+.links {
+  display: flex;
+  gap: 35px;
+}
+
+.links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  left: 7%;
+  top: 28%;
+  z-index: 1;
+}
+
+.text p {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.text h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 8vw;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  color: rgba(17, 17, 17, 0.08);
+}
+
+.model {
+  width: 360px;
+  height: 560px;
+  position: relative;
+  z-index: 5;
+  perspective: 1000px;
+}
+
+.head {
+  width: 230px;
+  height: 250px;
+  position: absolute;
+  top: 45px;
+  left: 65px;
+  transform-style: preserve-3d;
+  transition: transform 0.18s ease-out;
+  transform-origin: center bottom;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, #f7f7f7, #9d9d9d);
+  border: 4px solid #111;
+  border-radius: 38px 38px 55px 55px;
+  box-shadow:
+    16px 20px 0 #111,
+    inset 18px 18px 25px rgba(255,255,255,0.75),
+    inset -22px -25px 35px rgba(0,0,0,0.18);
+}
+
+.antenna {
+  width: 6px;
+  height: 55px;
+  background: #111;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.antenna::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 25px rgba(0,0,0,0.35);
+}
+
+.face-screen {
+  width: 170px;
+  height: 125px;
+  background: #111;
+  border-radius: 30px;
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 0 22px rgba(255,255,255,0.08);
+}
+
+.face-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  60%, 100% {
+    transform: translateX(130%);
+  }
+}
+
+.eye {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  transition: transform 0.18s ease-out;
+  box-shadow: 0 0 18px rgba(255,255,255,0.75);
+}
+
+.left-eye {
+  left: 38px;
+}
+
+.right-eye {
+  right: 38px;
+}
+
+.eye::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.nose {
+  width: 8px;
+  height: 25px;
+  background: #777;
+  position: absolute;
+  left: 50%;
+  top: 67px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.mouth {
+  width: 55px;
+  height: 8px;
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  opacity: 0.85;
+}
+
+.neck {
+  width: 80px;
+  height: 85px;
+  background: linear-gradient(90deg, #777, #e1e1e1, #777);
+  border: 4px solid #111;
+  position: absolute;
+  top: 275px;
+  left: 140px;
+  z-index: -1;
+  border-radius: 18px;
+}
+
+.body {
+  width: 330px;
+  height: 230px;
+  background: linear-gradient(145deg, #f4f4f4, #8f8f8f);
+  border: 4px solid #111;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  border-radius: 100px 100px 35px 35px;
+  box-shadow:
+    18px 20px 0 #111,
+    inset 25px 25px 35px rgba(255,255,255,0.6),
+    inset -25px -30px 40px rgba(0,0,0,0.2);
+}
+
+.chest-light {
+  width: 55px;
+  height: 55px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chest-light::after {
+  content: "";
+  width: 23px;
+  height: 23px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  inset: 16px;
+  box-shadow: 0 0 25px white;
+}
+
+.section-two {
+  min-height: 60vh;
+  background: #111;
+  color: white;
+  padding: 110px 12%;
+}
+
+.section-two h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 78px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.section-two p {
+  max-width: 700px;
+  color: #cfcfcf;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+  nav {
+    padding: 0 25px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .text {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: 18%;
+  }
+
+  .text h1 {
+    font-size: 18vw;
+  }
+
+  .model {
+    transform: scale(0.82);
+    margin-top: 120px;
+  }
+
+  .section-two h2 {
+    font-size: 48px;
+  }
+}
