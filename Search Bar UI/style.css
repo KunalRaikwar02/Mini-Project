@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  height: 80px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 7%;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-content span {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 9px 16px;
+  border-radius: 50px;
+  background: #111;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(48px, 8vw, 105px);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  margin: 25px auto;
+  max-width: 620px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.search-box {
+  margin: 35px auto 0;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  background: white;
+}
+
+.search-box input:focus {
+  border-color: #111;
+}
+
+.cards-section {
+  padding: 40px 7% 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid #e6e6e6;
+  transition: 0.3s ease;
+  min-height: 220px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.card.hide {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .cards-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+}
