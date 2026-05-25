@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  padding: 35px 60px;
+  background:
+    radial-gradient(circle at center, #1a1a1a, #050505 60%);
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  letter-spacing: 4px;
+  font-size: 22px;
+}
+
+nav a {
+  color: #dcdcdc;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content p {
+  color: #aaa;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  font-size: 90px;
+  margin: 15px 0;
+  letter-spacing: -3px;
+}
+
+.content span {
+  color: #999;
+  font-size: 18px;
+}
+
+.crosshair {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.line {
+  position: absolute;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.horizontal {
+  width: 100%;
+  height: 1px;
+  left: 0;
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+}
+
+.line.active {
+  opacity: 1;
+}
+
+.line.distort {
+  animation: glitch 0.45s ease;
+}
+
+@keyframes glitch {
+  0% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  30% {
+    filter: blur(2px);
+    transform: scale(1.02);
+  }
+  60% {
+    filter: blur(1px);
+    transform: scale(0.98);
+  }
+  100% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 25px;
+  }
+
+  .content h1 {
+    font-size: 48px;
+  }
+
+  nav a {
+    margin-left: 12px;
+  }
+}
