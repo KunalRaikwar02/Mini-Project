@@ -102,7 +102,7 @@ cards.forEach(card => {
     if (sendToBackOnClick) {
       sendToBack(this);
     }
-  });
+  }); 
 });
 
 window.addEventListener("mousemove", moveDrag);
