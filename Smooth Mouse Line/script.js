@@ -24,7 +24,6 @@ function animate() {
 
   points.push({ x: mouse.x, y: mouse.y });
 
-  // Short trail (adjust 15 for length)
   if (points.length > 15) {
     points.shift();
   }
